@@ -30,7 +30,7 @@ export default class Menu extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-3 col-md-2">
-                        <a href="index.html">
+                        <a href="/">
                             <img className="logo logo-dark" alt="logo" src="../img/logo-dark.png" />
                             <img className="logo logo-light" alt="logo" src="../img/logo-light.png" />
                         </a>
@@ -48,7 +48,7 @@ export default class Menu extends React.Component {
                 <div className="row">
                     <div className="col-lg-2 text-center text-left-sm hidden-xs order-lg-2">
                         <div className="bar__module">
-                            <a href="index.html">
+                            <a href="/">
                                 <img className="logo logo-dark" alt="logooo" src="../img/logo-dark.png" />
                                 <img className="logo logo-light" alt="logooo" src="../img/logo-dark.png" />
                             </a>
