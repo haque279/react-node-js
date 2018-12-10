@@ -1,0 +1,16 @@
+import '../assets/js/jquery-3.1.1.min.js';
+import '../assets/js/flickity.min.js';
+import '../assets/js/easypiechart.min.js';
+import '../assets/js/parallax.js';
+import '../assets/js/typed.min.js';
+import '../assets/js/datepicker.js';
+import '../assets/js/isotope.min.js';
+import '../assets/js/ytplayer.min.js';
+import '../assets/js/lightbox.min.js';
+import '../assets/js/granim.min.js';
+import '../assets/js/jquery.steps.min.js';
+import '../assets/js/countdown.min.js';
+import '../assets/js/twitterfetcher.min.js';
+import '../assets/js/spectragram.min.js';
+import '../assets/js/smooth-scroll.min.js';
+import '../assets/js/scripts.js';

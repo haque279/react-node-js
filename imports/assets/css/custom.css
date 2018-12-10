@@ -1,0 +1,15 @@
+/*! Place your custom styles here */
+
+.mr15 {margin-right: 15px}
+.banner {height: 100vh;}
+.login_container {background: grey}
+.site_btn {width: 50%}
+.login_wrapper { padding: 20px;  background: rgba(0,0,0,0.5);}
+.alert-danger {
+    color: #a94442 !important;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.nav-container {height: 90px; background: #2980b9;}
+.noborder {border: 0 solid}
+.alert {position: fixed; top: 100px; right: 30px; z-index: 999; }
