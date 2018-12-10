@@ -15,7 +15,7 @@ export default class Sidebar extends React.Component {
                 this.setState({error: err.reason});
             }else { 
                 const has_property = res[0].property_id;
-                if (has_property.length > 0){
+                if (has_property){
                     localStorage.setItem('has_property_id', has_property);
                     browserHistory.replace('/plot-owner');
                 }
@@ -37,7 +37,7 @@ export default class Sidebar extends React.Component {
         <div className="boxed boxed--lg boxed--border">
                                 <div className="text-block text-center">
                                     <img alt="avatar" src="../img/avatar-round-3.png" className="image--sm" />
-                                    { localStorage.getItem('has_property_id').length > 0 ? 
+                                    { localStorage.getItem('has_property_id') ? 
                                     <span className="h5">
                                     Property id: { localStorage.getItem('has_property_id') } <br/><br/>
                                     <form  onSubmit={this.newProperty.bind(this)}><input type="submit" value="New Property" /></form>
@@ -55,7 +55,7 @@ export default class Sidebar extends React.Component {
                                         </li>
                                        
                                           
-                                         { localStorage.getItem('has_property_id').length > 0 ? 
+                                         { localStorage.getItem('has_property_id') ? 
 
                                         <span>
                                         
