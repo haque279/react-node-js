@@ -63,7 +63,7 @@ export default class Menu extends React.Component {
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="links">
+                                    <a href="#">
                                         Accordions
                                     </a>
                                 </li>

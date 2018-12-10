@@ -15,8 +15,9 @@ export default class Sidebar extends React.Component {
                 this.setState({error: err.reason});
             }else { 
                 const has_property = res[0].property_id;
-                if (has_property){
+                if (has_property.length > 0){
                     localStorage.setItem('has_property_id', has_property);
+                    console.log(localStorage.getItem('has_property_id'));
                     browserHistory.replace('/plot-owner');
                 }
               }
@@ -55,7 +56,7 @@ export default class Sidebar extends React.Component {
                                         </li>
                                        
                                           
-                                         { localStorage.getItem('has_property_id') ? 
+                                         { localStorage.getItem('has_property_id')? 
 
                                         <span>
                                         
