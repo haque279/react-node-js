@@ -101,66 +101,72 @@ export default class TenantMemberInfo extends React.Component {
                                     <form  onSubmit={this.onSubmit.bind(this)}>
                                         <div className="row">
                                         <input type="text" ref="member_type" value="tenant-member" hidden />
-                                            <div className="col-md-6">
-                                                <label>flat_id:</label>
+                                        <div className="col-md-6">
+                                                <label>Flat No:</label>
                                                 <input type="text" ref="flat_id" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>name:</label>
+                                                <label>Name:</label>
                                                 <input type="text" ref="name" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>nid:</label>
+                                                <label>NID:</label>
                                                 <input type="text" ref="nid" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>dob:</label>
+                                                <label>DOB:</label>
                                                 <input type="date" ref="dob" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>gender:</label>
-                                                <input type="text" ref="gender" />
+                                                <label>Gender:</label>
+                                                <select name="" id="" ref="gender">
+                                                    <option value="male">male</option>
+                                                    <option value="female">female</option>
+                                                </select>
                                             </div>
                                             <div className="col-md-6">
-                                                <label>photo:</label>
-                                                <input type="text" ref="photo" />
+                                                <label>Photo:</label>
+                                                <input type="file" ref="photo"/>
                                             </div>
                                             <div className="col-md-6">
-                                                <label>father_name:</label>
+                                                <label>Father's Name:</label>
                                                 <input type="text" ref="father_name" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>mother_name:</label>
+                                                <label>Mother's Name:</label>
                                                 <input type="text" ref="mother_name" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>religion:</label>
+                                                <label>Religion:</label>
                                                 <input type="text" ref="religion" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>marital_status:</label>
-                                                <input type="text" ref="marital_status" />
+                                                <label>Marital Status:</label>
+                                                <select name="" id="" ref="marital_status">
+                                                    <option value="single">single</option>
+                                                    <option value="married">married</option>
+                                                </select>
                                             </div>
                                             <div className="col-md-6">
-                                                <label>mobile_no:</label>
+                                                <label>Mobile No:</label>
                                                 <input type="text" ref="mobile_no" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>email:</label>
+                                                <label>Email:</label>
                                                 <input type="text" ref="email" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>blood_group:</label>
+                                                <label>Blood Group:</label>
                                                 <input type="text" ref="blood_group" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>last_donation:</label>
+                                                <label>Last Donation Date:</label>
                                                 <input type="date" ref="last_donation" />
                                             </div>
                                             
                                             
                                             <div className="col-lg-3 col-md-4">
-                                                <button type="submit" className="btn btn--primary type--uppercase">Save Profile</button>
+                                                <button type="submit" className="btn btn--primary type--uppercase">Save</button>
                                             </div>
                                         </div>
                                     </form>

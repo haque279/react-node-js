@@ -71,11 +71,11 @@ export default class TenantMember extends React.Component {
                                              
                                             
                                             <div className="col-md-6">
-                                                <label>member_user_id:</label>
+                                                <label>User Id:</label>
                                                 <input type="text" ref="member_user_id" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>member_relation:</label>
+                                                <label>Relation:</label>
                                                 <input type="text" ref="member_relation" />
                                             </div>
                                             

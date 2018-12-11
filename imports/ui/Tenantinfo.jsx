@@ -84,47 +84,51 @@ export default class Tenantinfo extends React.Component {
                                         <div className="row">
                                              
                                             <div className="col-md-6">
-                                                <label>flat_id:</label>
+                                                <label>Flat No:</label>
                                                 <input type="text" ref="flat_id" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>user_id:</label>
+                                                <label>User Id:</label>
                                                 <input type="text" ref="user_id" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>total_tenant:</label>
+                                                <label>Total Tenant:</label>
                                                 <input type="text" ref="total_tenant" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>tenant_type:</label>
-                                                <input type="text" ref="tenant_type" />
+                                                <label>Tenant Type:</label>
+                                                <select name="" id="" ref="tenant_type">
+                                                    <option value="residential">residential</option>
+                                                    <option value="commercial">commercial</option>
+                                                </select>
                                             </div>
                                             <div className="col-md-6">
-                                                <label>ref_name:</label>
+                                                <label>Reference Name:</label>
                                                 <input type="text" ref="ref_name" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>relation:</label>
+                                                <label>Relation:</label>
                                                 <input type="text" ref="relation" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>address:</label>
+                                                <label>Address:</label>
                                                 <input type="text" ref="address" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>police_station:</label>
+                                                <label>Police Station:</label>
                                                 <input type="text" ref="police_station" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>district:</label>
+                                                <label>District:</label>
                                                 <input type="text" ref="district" />
                                             </div>
                                             
                                             
                                             
                                             
-                                            <div className="col-lg-3 col-md-4">
-                                                <button type="submit" className="btn btn--primary type--uppercase">Save Profile</button>
+                                            <div className="col-lg-12 col-md-12"></div>
+                                            <div className="col-lg-4 col-md-4">
+                                                <button type="submit" className="btn btn--primary type--uppercase">Save</button>
                                             </div>
                                         </div>
                                     </form>

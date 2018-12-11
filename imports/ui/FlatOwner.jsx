@@ -7,7 +7,7 @@ import { Members } from '../api/members';
 import Menu from '../inc/Menu';
 import Sidebar from '../inc/Sidebar';
 
-export default class Tenant extends React.Component {
+export default class FlatOwner extends React.Component {
 
     constructor(props){
         super(props);
@@ -97,11 +97,11 @@ export default class Tenant extends React.Component {
                                 <div id="account-profile" className="account-tab">
                                 {this.state.error ? <p className="alert bg--error">{this.state.error}</p> : undefined}
                                 {this.state.message ? <p className="alert bg--success">{this.state.message}</p> : undefined}
-                                    <h4>Tenant</h4>
+                                    <h4>Flat Owner</h4>
                                     <form  onSubmit={this.onSubmit.bind(this)}>
                                         <div className="row">
-                                        <input type="text" ref="member_type" value="tenant" hidden />
-                                        <div className="col-md-6">
+                                        <input type="text" ref="member_type" value="flat-owner" hidden />
+                                            <div className="col-md-6">
                                                 <label>Flat No:</label>
                                                 <input type="text" ref="flat_id" />
                                             </div>

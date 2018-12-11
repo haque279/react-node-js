@@ -9,6 +9,7 @@ import Login from '../ui/Login';
 import Home from '../ui/Home';
 import Property from '../ui/Property';
 import PlotOwner from '../ui/PlotOwner';
+import FlatOwner from '../ui/FlatOwner';
 import Rental from '../ui/Rental';
 import Tenant from '../ui/Tenant';
 import Tenantinfo from '../ui/Tenantinfo';
@@ -18,7 +19,7 @@ import TenantMemberInfo from '../ui/TenantMemberInfo';
 import TenantDetails from '../ui/TenantDetails';
 
 const unauthenticatedPages = ['/', '/signup'];
-const authenticatedPages = ['/links', '/property', 'plot-owner' , 'renetal', 'tenant', 'tenantinfo', 'tenant-member', 'tenant-recommendation', 'tenant-member-info', 'tenant-details'];
+const authenticatedPages = ['/links', '/property', 'plot-owner' , 'flat-owner', 'renetal', 'tenant', 'tenantinfo', 'tenant-member', 'tenant-recommendation', 'tenant-member-info', 'tenant-details'];
 const onEnterPublicPage = () => {
   if (Meteor.userId()) {
     browserHistory.replace('/links');
@@ -48,6 +49,7 @@ export const routes = (
     <Route path="/links" component={Link} onEnter={onEnterPrivatePage}/>
     <Route path="/property" component={Property} onEnter={onEnterPrivatePage}/>
     <Route path="/plot-owner" component={PlotOwner} onEnter={onEnterPrivatePage}/>
+    <Route path="/flat-owner" component={FlatOwner} onEnter={onEnterPrivatePage}/>
     <Route path="/rental" component={Rental} onEnter={onEnterPrivatePage}/>
     <Route path="/tenant" component={Tenant} onEnter={onEnterPrivatePage}/>
     <Route path="/tenantinfo" component={Tenantinfo} onEnter={onEnterPrivatePage}/>

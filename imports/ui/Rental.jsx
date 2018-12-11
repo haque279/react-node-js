@@ -79,25 +79,25 @@ export default class Rental extends React.Component {
                                         <div className="row">
                                              
                                         <div className="col-md-6">
-                                                <label>flat_id:</label>
+                                                <label>Flat No:</label>
                                                 <input type="text" ref="flat_id" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>flat_status:</label>
+                                                <label>Flat Status:</label>
                                                 <input type="text" ref="flat_status" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>date_from:</label>
+                                                <label>From:</label>
                                                 <input type="date" ref="date_from" />
                                             </div>
                                             <div className="col-md-6">
-                                                <label>date_to:</label>
+                                                <label>To:</label>
                                                 <input type="date" ref="date_to" />
                                             </div>
                                             
                                             
                                             <div className="col-lg-3 col-md-4">
-                                                <button type="submit" className="btn btn--primary type--uppercase">Save Profile</button>
+                                                <button type="submit" className="btn btn--primary type--uppercase">Save</button>
                                             </div>
                                         </div>
                                     </form>

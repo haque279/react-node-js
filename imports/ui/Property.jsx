@@ -257,7 +257,7 @@ export default class Property extends React.Component {
                                     <div className="row">
                                        
                                         <div className="col-md-6">
-                                            <label>property_type:</label>
+                                            <label>Property Type:</label>
                                             <select ref="property_type" id="">
                                                 <option value="one">One</option>
                                                 <option value="two">Two</option>
@@ -265,47 +265,47 @@ export default class Property extends React.Component {
                                             </select>
                                         </div>
                                         <div className="col-md-6">
-                                            <label>plot_no:</label>
+                                            <label>Plot No:</label>
                                             <input type="text" ref="plot_no" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>road:</label>
+                                            <label>Road:</label>
                                             <input type="text" ref="road" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>avenue:</label>
+                                            <label>Avenue:</label>
                                             <input type="text" ref="avenue" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>latitude:</label>
+                                            <label>Latitude:</label>
                                             <input type="text" ref="latitude" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>longitude:</label>
+                                            <label>Longitude:</label>
                                             <input type="text" ref="longitude" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>total_flat:</label>
+                                            <label>Total Flat:</label>
                                             <input type="text" ref="total_flat" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>sold:</label>
+                                            <label>Sold:</label>
                                             <input type="text" ref="sold" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>rent:</label>
+                                            <label>Rent:</label>
                                             <input type="text" ref="rent" />
                                         </div>
 
                                         <div className="col-md-12">
-                                            <h4 className="text-center">plot_owner_information</h4>
+                                            <h4 className="text-center">Plot owner's information</h4>
                                         </div>
                                         <div className="col-md-6">
-                                            <label>total_family_members:</label>
+                                            <label>Total family members:</label>
                                             <input type="text" ref="total_family_members" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>dependent:</label>
+                                            <label>Dependent:</label>
                                             <input type="text" ref="dependent" />
                                         </div>
 
@@ -313,29 +313,29 @@ export default class Property extends React.Component {
 
 
                                         <div className="col-md-12">
-                                            <h5 className="text-center">emergency_contact</h5>
+                                            <h5 className="text-center">Emergency Contact</h5>
                                         </div>
                                         <div className="col-md-12">
-                                            <label>name:</label>
+                                            <label>Name:</label>
                                             <input type="text" ref="name" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>relation:</label>
+                                            <label>Relation:</label>
                                             <input type="text" ref="relation" />
                                         </div>
                                         <div className="col-md-6">
-                                            <label>mobile_no:</label>
+                                            <label>Mobile No:</label>
                                             <input type="text" ref="mobile_no" />
                                         </div>
                                         <div className="col-md-12">
-                                            <label>address:</label>
+                                            <label>Address:</label>
                                             <input type="text" ref="address" />
                                         </div>
                                         <hr/>
 
                                         
                                         <div className="col-lg-3 col-md-4">
-                                            <button type="submit" className="btn btn--primary type--uppercase">Save Profile</button>
+                                            <button type="submit" className="btn btn--primary type--uppercase">Save Property</button>
                                         </div>
                                     </div>
                                 </form>
@@ -361,7 +361,7 @@ export default class Property extends React.Component {
                                 </li>
                                 <li className="list-inline-item">
                                     <a href="#">
-                                        <span className="type--fine-print">help@stack.io</span>
+                                        <span className="type--fine-print">info@somansis.com</span>
                                     </a>
                                 </li>
                             </ul>

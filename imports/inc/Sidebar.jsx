@@ -48,7 +48,7 @@ export default class Sidebar extends React.Component {
     }
                                     <span className="label">Property owner</span>
                                 </div>
-                                <hr />
+                               
                                 <div className="text-block">
                                     <ul className="menu-vertical">
                                         <li>
@@ -64,25 +64,28 @@ export default class Sidebar extends React.Component {
                                             <Link to="/plot-owner">Plot owner</Link>
                                         </li>
                                         <li>
+                                            <Link to="/flat-owner">Flat owner</Link>
+                                        </li>
+                                        <li>
                                             <Link to="/rental">Rental</Link>
                                         </li>
                                         <li>
                                             <Link to="/tenant">Tenant</Link>
                                         </li>
                                         <li>
-                                            <Link to="/tenantinfo">tenantinfo</Link>
+                                            <Link to="/tenantinfo">Tenant Info</Link>
                                         </li>
                                         <li>
-                                            <Link to="/tenant-member">tenant-member</Link>
+                                            <Link to="/tenant-member">Add Tenant Member</Link>
                                         </li>
                                         <li>
-                                            <Link to="/tenant-recommendation">tenant-recommendation</Link>
+                                            <Link to="/tenant-recommendation">Tenant Recommendation</Link>
                                         </li>
                                         <li>
-                                            <Link to="/tenant-member-info">tenant-member-info</Link>
+                                            <Link to="/tenant-member-info">Tenant Member Info</Link>
                                         </li>
                                         </span>
-                                          : 'nothing' }
+                                          : undefined }
                                         
                                     </ul>
                                 </div>
