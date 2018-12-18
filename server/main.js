@@ -6,6 +6,8 @@ import { Links } from '../imports/api/links';
 import {Properties} from'../imports/api/properties';
 import { Members } from '../imports/api/members';
 import { Tenantinfos } from '../imports/api/tenantinfos';
+import { Vehicles } from '../imports/api/vehicles';
+import { Employees } from '../imports/api/employees';
 
 import '../imports/startup/simple-schema-configuration.js';
 

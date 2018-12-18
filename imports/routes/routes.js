@@ -16,10 +16,12 @@ import Tenantinfo from '../ui/Tenantinfo';
 import TenantMember from '../ui/TenantMember';
 import TenantRecommendation from '../ui/TenantRecommendation';
 import TenantMemberInfo from '../ui/TenantMemberInfo';
+import Vehicle from '../ui/Vehicle';
+import Employee from '../ui/Employee';
 import TenantDetails from '../ui/TenantDetails';
 
 const unauthenticatedPages = ['/', '/signup'];
-const authenticatedPages = ['/links', '/property', 'plot-owner' , 'flat-owner', 'renetal', 'tenant', 'tenantinfo', 'tenant-member', 'tenant-recommendation', 'tenant-member-info', 'tenant-details'];
+const authenticatedPages = ['/links', '/property', 'plot-owner' , 'flat-owner', 'renetal', 'tenant', 'tenantinfo', 'tenant-member', 'tenant-recommendation', 'tenant-member-info', 'vehicle', 'employee', 'tenant-details'];
 const onEnterPublicPage = () => {
   if (Meteor.userId()) {
     browserHistory.replace('/links');
@@ -56,6 +58,8 @@ export const routes = (
     <Route path="/tenant-member" component={TenantMember} onEnter={onEnterPrivatePage}/>
     <Route path="/tenant-recommendation" component={TenantRecommendation} onEnter={onEnterPrivatePage}/>
     <Route path="/tenant-member-info" component={TenantMemberInfo} onEnter={onEnterPrivatePage}/>
+    <Route path="/vehicle" component={Vehicle} onEnter={onEnterPrivatePage}/>
+    <Route path="/employee" component={Employee} onEnter={onEnterPrivatePage}/>
     <Route path="/tenant-details" component={TenantDetails} onEnter={onEnterPrivatePage}/>
 
     <Route path="*" component={NotFound}/>
