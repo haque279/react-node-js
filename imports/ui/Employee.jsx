@@ -17,6 +17,10 @@ export default class Employee extends React.Component {
             message: ''
         };
 
+        if (Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner','tenant']) === false){
+            browserHistory.replace('/property');
+        }
+
         console.log(localStorage.getItem('has_property_id'));
     }
   
@@ -42,6 +46,25 @@ export default class Employee extends React.Component {
                   this.setState({error: err.reason});
                 //   console.log(this.state.error);
               }else { 
+                const password = mobile_no;
+                var email = mobile_no + '@email.com'
+                Accounts.createUser({email, password}, (err) => {
+                    if (err) {
+                      this.setState({error: err.reason});
+                    } else {
+                      const roles = 'employee';
+                      Meteor.call('user.roles', Meteor.userId(), roles,   (err, res) => {
+                        if(err){
+                            this.setState({error: err.reason});
+                        }else { 
+                            console.log("role update");
+                          }
+                    });
+              
+                    this.setState({error: ''});
+                    }
+                  }); 
+
                   this.setState({message: 'Successfully added!!!'});
                   this.refs.flat_id.value = '';
                   this.refs.name.value = '';

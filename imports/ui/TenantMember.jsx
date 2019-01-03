@@ -16,6 +16,10 @@ export default class TenantMember extends React.Component {
             error: '',
             message: ''
         };
+
+        if (Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner','tenant']) === false){
+            browserHistory.replace('/property');
+        }
     }
   
     onSubmit(e) {

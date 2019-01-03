@@ -8,6 +8,7 @@ import { Members } from '../imports/api/members';
 import { Tenantinfos } from '../imports/api/tenantinfos';
 import { Vehicles } from '../imports/api/vehicles';
 import { Employees } from '../imports/api/employees';
+import {Role} from '../imports/api/roles';
 
 import '../imports/startup/simple-schema-configuration.js';
 

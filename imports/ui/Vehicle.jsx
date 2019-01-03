@@ -16,6 +16,9 @@ export default class Vehicle extends React.Component {
             error: '',
             message: ''
         };
+        if (Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner','tenant']) === false){
+            browserHistory.replace('/property');
+        }
 
         console.log(localStorage.getItem('has_property_id'));
     }

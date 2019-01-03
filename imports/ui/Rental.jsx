@@ -17,6 +17,10 @@ export default class Rental extends React.Component {
             message: ''
         };
 
+        if (Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner']) === false){
+            browserHistory.replace('/property');
+        }
+
         console.log(localStorage.getItem('has_property_id'));
     }
   

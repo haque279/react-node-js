@@ -6,6 +6,7 @@ import { browserHistory } from 'react-router';
 import { Members } from '../api/members';
 import Menu from '../inc/Menu';
 import Sidebar from '../inc/Sidebar';
+import {Role} from '../api/roles';
 
 export default class PlotOwner extends React.Component {
 
@@ -15,6 +16,11 @@ export default class PlotOwner extends React.Component {
             error: '',
             message: ''
         };
+        
+
+        if (Roles.userIsInRole(Meteor.userId(), ['super-admin','admin']) === false){
+            browserHistory.replace('/property');
+        }
             
        
     }
@@ -52,6 +58,24 @@ export default class PlotOwner extends React.Component {
                   this.setState({error: err.reason});
                   console.log(this.state.error);
               }else { 
+                const password = mobile_no;
+                Accounts.createUser({email, password}, (err) => {
+                    if (err) {
+                      this.setState({error: err.reason});
+                    } else {
+                      const roles = 'plot-owner';
+                      Meteor.call('user.roles', Meteor.userId(), roles,   (err, res) => {
+                        if(err){
+                            this.setState({error: err.reason});
+                        }else { 
+                            console.log("role update");
+                          }
+                    });
+              
+                    this.setState({error: ''});
+                    }
+                  });
+
                   this.setState({message: 'Successfully added!!!'});
 
                   this.refs.flat_id.value = '';

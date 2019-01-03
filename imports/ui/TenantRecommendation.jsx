@@ -16,6 +16,9 @@ export default class TenantRecommendation extends React.Component {
             error: '',
             message: ''
         };
+        if (Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner']) === false){
+            browserHistory.replace('/property');
+        }
     }
   
     onSubmit(e) {

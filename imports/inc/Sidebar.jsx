@@ -50,50 +50,74 @@ export default class Sidebar extends React.Component {
                     </div>
 
                     <div className="text-block">
+
+                     
                         <ul className="menu-vertical">
-                            <li>
-                                <Link to="/property">Property</Link>
-                            </li>
-
-
-                            {localStorage.getItem('has_property_id') ?
+                            
+                            { localStorage.getItem('has_property_id') ?
 
                                 <span>
-
+                                { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner','tenant','tenant-member']) ?
+                                <li>
+                                    <Link to="/property">Property</Link>
+                                </li>
+                                : undefined }
+                                { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin']) ?
                                     <li>
                                         <Link to="/plot-owner">Plot owner</Link>
                                     </li>
+                                    : undefined }
+                                    { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner']) ?
                                     <li>
                                         <Link to="/flat-owner">Flat owner</Link>
                                     </li>
+                                    : undefined }
+                                    { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner']) ?
                                     <li>
                                         <Link to="/rental">Rental</Link>
                                     </li>
+                                    : undefined }
+                                    { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner']) ?
                                     <li>
                                         <Link to="/tenant">Tenant</Link>
                                     </li>
+                                    : undefined }
+                                    { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner']) ?
                                     <li>
                                         <Link to="/tenantinfo">Tenant Info</Link>
                                     </li>
+                                    : undefined }
+                                    { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner','tenant']) ?
                                     <li>
                                         <Link to="/tenant-member">Add Tenant Member</Link>
                                     </li>
+                                    : undefined }
+                                    { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner']) ?
                                     <li>
                                         <Link to="/tenant-recommendation">Tenant Recommendation</Link>
                                     </li>
+                                    : undefined }
+                                    { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner','tenant']) ?
                                     <li>
                                         <Link to="/tenant-member-info">Tenant Member Info</Link>
                                     </li>
+                                    : undefined }
+                                    { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner','tenant']) ?
                                     <li>
                                         <Link to="/vehicle">Vehicle</Link>
                                     </li>
+                                    : undefined }
+                                    { Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner','flat-owner','tenant']) ?
                                     <li>
                                         <Link to="/employee">Employee</Link>
                                     </li>
+                                    : undefined }
                                 </span>
-                                : undefined}
+                                : undefined }
 
                         </ul>
+                       
+                        
                     </div>
                 </div>
             </div>

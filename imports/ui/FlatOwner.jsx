@@ -15,6 +15,10 @@ export default class FlatOwner extends React.Component {
             error: '',
             message: ''
         };
+
+        if (Roles.userIsInRole(Meteor.userId(), ['super-admin','admin','plot-owner']) === false){
+            browserHistory.replace('/property');
+        }
             
        
     }
@@ -51,7 +55,24 @@ export default class FlatOwner extends React.Component {
               if(err){
                   this.setState({error: err.reason});
                   console.log(this.state.error);
-              }else { 
+              }else {
+                const password = mobile_no;
+                Accounts.createUser({email, password}, (err) => {
+                    if (err) {
+                      this.setState({error: err.reason});
+                    } else {
+                      const roles = 'flat-owner';
+                      Meteor.call('user.roles', Meteor.userId(), roles,   (err, res) => {
+                        if(err){
+                            this.setState({error: err.reason});
+                        }else { 
+                            console.log("role update");
+                          }
+                    });
+              
+                    this.setState({error: ''});
+                    }
+                  }); 
                   this.setState({message: 'Successfully added!!!'});
 
                   this.refs.flat_id.value = '';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import { Accounts } from 'meteor/accounts-base';
+import {Role} from '../api/roles';
 
 export default class Signup extends React.Component {
   constructor(props) {
@@ -23,7 +24,16 @@ export default class Signup extends React.Component {
       if (err) {
         this.setState({error: err.reason});
       } else {
-        this.setState({error: ''});
+        const roles = 'admin';
+        Meteor.call('user.roles', Meteor.userId(), roles,   (err, res) => {
+          if(err){
+              this.setState({error: err.reason});
+          }else { 
+              console.log("role update");
+            }
+      });
+
+      this.setState({error: ''});
       }
     });
   }
